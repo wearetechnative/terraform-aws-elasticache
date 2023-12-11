@@ -2,10 +2,10 @@ resource "aws_elasticache_cluster" "elasticache" {
   count = var.num_cache_nodes == 1 || var.engine == "memcached" ? 1 : 0
   cluster_id           = var.cluster_name
   engine               = var.engine
-  engine_version       = var.engine_version 
-  node_type            = var.node_type     
+  engine_version       = var.engine_version
+  node_type            = var.node_type
   num_cache_nodes      = var.num_cache_nodes
-  parameter_group_name = aws_elasticache_parameter_group.elasticache_parameters.name 
+  parameter_group_name = aws_elasticache_parameter_group.elasticache_parameters.name
   port                 = var.engine == "redis" ? 6379 : 11211
   az_mode              = var.multi_az_mode == true && var.engine == "memcached" ? "cross-az" : "single-az"
   maintenance_window   = "wed:01:30-wed:02:30"
@@ -19,7 +19,7 @@ resource "aws_elasticache_replication_group" "redis_replication_cluster" {
   count = var.num_cache_nodes != 1 && var.engine == "redis" ? 1 : 0
   automatic_failover_enabled  = true
   preferred_cache_cluster_azs = var.preferred_cache_cluster_azs
-  replication_group_id        = "redis-replication-cluster"
+  replication_group_id        = var.cluster_name
   description                 = "replication group for redis cluster"
   node_type                   = var.node_type
   engine                      = "redis"
