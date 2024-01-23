@@ -11,7 +11,7 @@ resource "aws_elasticache_cluster" "elasticache" {
   maintenance_window         = "wed:01:30-wed:02:30"
   subnet_group_name          = aws_elasticache_subnet_group.elasticache_subnet_group.name
   security_group_ids         = var.security_group_ids
-  transit_encryption_enabled = true
+  transit_encryption_enabled = var.transit_encryption
   tags = merge(var.additional_tags,
   { Type = var.engine })
 }
@@ -31,7 +31,7 @@ resource "aws_elasticache_replication_group" "redis_replication_cluster" {
   multi_az_enabled            = var.multi_az_mode
   security_group_ids          = var.security_group_ids
   subnet_group_name           = aws_elasticache_subnet_group.elasticache_subnet_group.name
-  transit_encryption_enabled  = true
+  transit_encryption_enabled  = var.transit_encryption
   tags = merge(var.additional_tags,
   { Type = var.engine })
 }

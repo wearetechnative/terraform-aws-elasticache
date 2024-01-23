@@ -64,3 +64,8 @@ variable "additional_tags" {
   type        = map(string)
   default     = {}
 }
+
+variable "transit_encryption" {
+  description = "switch in transit encryption on or off"
+  type= bool
+}
