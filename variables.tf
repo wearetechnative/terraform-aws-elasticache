@@ -5,9 +5,9 @@ variable "cluster_name" {
 
 variable "engine" {
   description = "Choose between redis or memcached engine types"
-  type = string
+  type        = string
   validation {
-    condition = contains(["redis", "memcached"], var.engine)
+    condition     = contains(["redis", "memcached"], var.engine)
     error_message = "Only redis or memcached are valid options"
   }
 }
@@ -25,7 +25,7 @@ variable "num_cache_nodes" {
 
 variable "preferred_cache_cluster_azs" {
   description = "Set prefered AZ's for the cache clusters"
-  type = list(string)
+  type        = list(string)
 }
 
 variable "subnet_ids" {
@@ -50,13 +50,13 @@ variable "engine_version" {
 
 variable "parameter_group_family" {
   description = "Provide parameter group family"
-  default = "redis6.x"
+  default     = "redis6.x"
 }
 
 variable "parameter_group_overrides" {
   description = "Optional map of user defined parameters. The map key is the parameter name."
-  type = map(string)
-  default = {}
+  type        = map(string)
+  default     = {}
 }
 
 variable "additional_tags" {
