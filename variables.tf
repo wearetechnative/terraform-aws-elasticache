@@ -68,4 +68,5 @@ variable "additional_tags" {
 variable "transit_encryption" {
   description = "switch in transit encryption on or off"
   type= bool
+  default = false
 }
