@@ -1,4 +1,4 @@
-# Terraform AWS [Module Name] ![](https://img.shields.io/github/workflow/status/TechNative-B-V/terraform-aws-module-name/tflint.yaml?style=plastic)
+# Terraform AWS [Module Name] ![](https://img.shields.io/github/workflow/status/wearetechnative/terraform-aws-elasticache/tflint.yaml?style=plastic)
 
 <!-- SHIELDS -->
 
