@@ -1,4 +1,4 @@
-# Terraform AWS [terraform-aws-elasticache] ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-elasticache/tflint.yaml?style=plastic)
+# Terraform AWS [terraform-aws-elasticache] ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-elasticache/lint.yaml?branch=main&style=plastic&label=lint) ![](https://img.shields.io/github/actions/workflow/status/wearetechnative/terraform-aws-elasticache/security-scan.yaml?branch=main&style=plastic&label=security)
 
 <!-- SHIELDS -->
 
