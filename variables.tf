@@ -50,6 +50,7 @@ variable "engine_version" {
 
 variable "parameter_group_family" {
   description = "Provide parameter group family"
+  type        = string
   default     = "redis6.x"
 }
 
